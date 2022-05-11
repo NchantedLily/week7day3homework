@@ -1,9 +1,59 @@
-import React, { Component } from 'react'
+//#1 Learn about Func Programming
+// Function that returns a string representing a cup of green tea
+const prepareTea = () => 'greenTea';
 
-export default class app extends Component {
-  render() {
-    return (
-      <div>app</div>
-    )
+/*
+Given a function (representing the tea type) and number of cups needed, the
+following function returns an array of strings (each representing a cup of
+a specific type of tea).
+*/
+const getTea = (numOfCups) => {
+  const teaCups = [];
+
+  for(let cups = 1; cups <= numOfCups; cups += 1) {
+    const teaCup = prepareTea();
+    teaCups.push(teaCup);
   }
-}
+  return teaCups;
+};
+
+// Only change code below this line
+const tea4TeamFCC = getTea(40);
+// Only change code above this line
+
+//#2 Understand func and prog terms
+
+// Function that returns a string representing a cup of green tea
+const prepareGreenTea = () => 'greenTea';
+
+// Function that returns a string representing a cup of black tea
+const prepareBlackTea = () => 'blackTea';
+
+/*
+Given a function (representing the tea type) and number of cups needed, the
+following function returns an array of strings (each representing a cup of
+a specific type of tea).
+*/
+const getTea = (prepareTea, numOfCups) => {
+  const teaCups = [];
+
+
+  for(let cups = 1; cups <= numOfCups; cups += 1) {
+    const teaCup = prepareTea();
+    teaCups.push(teaCup);
+  }
+  return teaCups;
+};
+
+// Only change code below this line
+const tea4GreenTeamFCC = getTea(prepareGreenTea, 27); 
+const tea4BlackTeamFCC = getTea(prepareBlackTea, 13);
+// Only change code above this line
+
+console.log(
+  tea4GreenTeamFCC,
+  tea4BlackTeamFCC
+);
+
+//#3 Understand the hazards of using imperative code
+
